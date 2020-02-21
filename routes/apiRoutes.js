@@ -1,30 +1,31 @@
-const db = require("../models/")
-const mongoose = require("mongoose");
-const express = require("express");
-
-const app = express();
-
-// Load index.htnml file
-app.get("/", (err, res) => {
-    res.render("index.html");
-})
+// const db = require("../models/")
+// const mongoose = require("mongoose");
 
 
-db.Student.create({ name: "Dan Rosenbaum"})
-  .then(dbStudent => {
-      console.log(dbStudent);
-  })
-   .catch (( { message} ) => {
-       console.log(message);
-   });
 
-app.get("/api/students", (req,res) => {
-    db.Student.find({})
-    .then(dbStudent => {
-        console.log(dbStudent);
-        res.json(dbStudent);
+
+//     // Load index.htnml file
+// app.get("/", (err, res) => {
+//     res.render("index.html");
+// })
+
+
+// app.get("/api/students", (req,res) => {
+//     db.Student.find({})
+//     .then(dbStudent => {
+//         console.log(dbStudent);
+//         res.json(dbStudent);
        
-    }) .catch(err => {
-        res.json(err);
-      });
-})
+//     }) .catch(err => {
+//         res.json(err);
+//       });
+// })
+
+
+// db.Student.create({ name: "Dan Rosenbaum"})
+//   .then(dbStudent => {
+//       console.log(dbStudent);
+//   })
+//    .catch (( { message} ) => {
+//        console.log(message);
+//    });

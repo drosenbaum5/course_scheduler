@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const SubjectSchema = new Schema({
     name: {
         type: String,
+        unique: true,
         trim: true
     }
 });
